@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 public class SecondActivity extends BaseActivity {
 
@@ -34,5 +35,10 @@ public class SecondActivity extends BaseActivity {
 			return true;
 		}
 		return super.onOptionsItemSelected(item);
+	}
+	
+	@Override
+	protected void onSubMenuItemClicked(int itemId) {
+		Toast.makeText(this, "You've clicked: " + itemId, Toast.LENGTH_SHORT).show();
 	}
 }
