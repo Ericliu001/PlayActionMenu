@@ -47,11 +47,11 @@ public  class BaseActivity extends Activity {
 				item.setIcon(null);
 			}
 			if (subMenuTitles != null && subMenuTitles.length > 0) {
-				item.setActionProvider(new MyActionProvider(this, subMenuTitles));
+				item.setActionProvider(new MyActionProvider(this,item.getItemId(), subMenuTitles));
 			}
 	}
 	
-	protected  void onSubMenuItemClicked(int itemId){
+	protected  void onSubMenuItemClicked(int menuItemId, int subItemId){
 		
 	};
 	
@@ -62,11 +62,13 @@ public  class BaseActivity extends Activity {
 	
 private class MyActionProvider extends ActionProvider implements OnMenuItemClickListener{
 	private Context context;
-	private String[] titles = {"First" , "Second", "Third" , "Fourth", " Fifth"};
+	private int menuItemId;
+	private String[] titles;
 	
-	public MyActionProvider(Context context, String[] subMenuTitles) {
+	public MyActionProvider(Context context, int menuItemId, String[] subMenuTitles) {
 		super(context);
 		this.context = context;
+		this.menuItemId = menuItemId;
 		titles = subMenuTitles;
 	}
 
@@ -99,7 +101,7 @@ private class MyActionProvider extends ActionProvider implements OnMenuItemClick
 	@Override
 	public boolean onMenuItemClick(MenuItem item) {
 		
-		onSubMenuItemClicked(item.getItemId());
+		onSubMenuItemClicked(menuItemId, item.getItemId());
 		
 		return true;
 	}

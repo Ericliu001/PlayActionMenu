@@ -29,14 +29,16 @@ public class MainActivity extends BaseActivity {
 	}
 	
 	
+	
+	
 	public void onButtonClicked(View v){
 		Intent intent = new Intent(this, SecondActivity.class);
 		startActivity(intent);
 	}
 	
 	@Override
-	protected void onSubMenuItemClicked(int itemId) {
-		Toast.makeText(this, "You've clicked: " + itemId, Toast.LENGTH_SHORT).show();
+	protected void onSubMenuItemClicked( int menuItemId, int subItemId) {
+		Toast.makeText(this, "You've clicked: " + menuItemId + "." + subItemId, Toast.LENGTH_SHORT).show();
 	}
 
 }
