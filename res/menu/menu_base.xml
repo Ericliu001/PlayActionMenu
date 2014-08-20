@@ -1,0 +1,44 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.playactionmenu.MainActivity" >
+
+    <item
+        android:id="@+id/action_settings"
+        android:enabled="true"
+        android:icon="@drawable/ic_action_settings"
+        android:orderInCategory="100"
+        android:showAsAction="always"
+        android:title="@string/action_settings"
+        android:visible="false"/>
+    <item
+        android:id="@+id/action_create"
+        android:icon="@drawable/ic_action_create"
+        android:orderInCategory="100"
+        android:showAsAction="always"
+        android:title="CREATE"
+        
+        android:visible="false"
+        />
+    <item
+        android:id="@+id/action_edit"
+        android:icon="@drawable/ic_action_edit"
+        android:orderInCategory="100"
+        android:showAsAction="always"
+        android:title="EDIT"
+        android:visible="false"/>
+    <item
+        android:id="@+id/action_cancel"
+        android:icon="@drawable/ic_action_cancel"
+        android:orderInCategory="100"
+        android:showAsAction="always"
+        android:title="CANCEL"
+        android:visible="false"/>
+    <item
+        android:id="@+id/action_save"
+        android:icon="@drawable/ic_action_save"
+        android:orderInCategory="100"
+        android:showAsAction="always"
+        android:title="SAVE"
+        android:visible="false"/>
+
+</menu>
