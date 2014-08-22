@@ -1,4 +1,9 @@
-package com.playactionmenu;
+package com.playactionmenu.base;
+
+import com.playactionmenu.R;
+import com.playactionmenu.R.drawable;
+import com.playactionmenu.R.id;
+import com.playactionmenu.R.menu;
 
 import android.app.Activity;
 import android.content.Context;
